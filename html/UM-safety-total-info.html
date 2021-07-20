@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ETRI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+<div class="wrap">
+	<!-- header -->
+    <div class="header">
+		<div class="header__title">
+			<span>한국타이어 대전공장 안전관리시스템</span>
+		</div>
+		<div class="header__menu__toggle">
+			<div class="header__menu__hamburger">
+				<input class="hamburger__menu__btn" type="checkbox"/>
+
+				<span class="toolbar-menu"></span>
+
+				<div class="header__menu-area">
+					<div class="side__menu-list__close">
+						<span class="close"></span>
+					</div>
+                    <!-- LNB 개인정보 영역 -->
+					<div class="header_myinfo">
+						<div class="header-profile">
+							<img src="images/dummy-profile.jpg" class="profile-photo">
+							<div class="emergency"><span class="dot red"></span>주시대상</div><!-- 주시대상 상태에 따라 추가 -->
+						</div>
+						<div class="profile-info">
+							<span>홍길동</span>ID : 776</a>
+							<div>타이어 성형 2팀 | A08</div>
+							<a href="#">Logout</a><a href="#">Setting</a>
+						</div>
+					</div>
+					<!--// LNB 개인정보 영역 -->
+					<!-- menu -->
+					<div class="side__menu-list">
+						<button class="accordion">사고관리</button>
+						<div class="panel">
+							<a href="#">전체사고관리</a>
+							<a href="#">AI종합진단</a>
+							<a href="#">AI개인진단</a>
+						</div>
+						<a class="accordion ">안전점검일지</a>
+						<button class="accordion">작업관리</button>
+						<div class="panel">
+							<a href="#">작업자관리</a>
+							<a href="#">작업구역관리</a>
+							<a href="#">체크리스트관리</a>
+						</div>
+						<a class="accordion">운영기기관리</a>
+						<button class="accordion">메시지관리</button>
+						<div class="panel">
+							<a href="#">메시지관리</a>
+							<a href="#">메시지템플릿</a>
+						</div>
+						<a class="accordion">설정</a>
+					</div>
+					<!-- //menu -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="header__utility">
+			<a href="#" class="icon-alret" onclick="snackFunction()"><span class="dot red">5</span></a>
+		</div>
+    </div>
+	<div class="header__sub">
+		<div class="notice__area">
+            <span class="notice__area--date">2021-04-15</span>
+            <a href="#">5월 1일 지게차 안전점검을 실시합니다. <u>자세히보기</u></a>
+            <span class="icon-modify"><a href="#"></a></span>
+        </div>
+	</div>
+
+	<div class="contents">
+		<!--주간 날짜 선택:: 고정-->
+		<div class="safetyCheck-calendar-app" style="position: relative;top:0;z-index: 0;padding:2px 10px">
+            <!-- 개인정보 영역 -->
+            <div class="setting-app-info mgt1">
+                <img src="images/dummy-profile.jpg" class="profile-photo">
+                <div class="profile-info">
+					<span><span class="dot red"></span>홍길동</span>ID : 776</a><!--주시대상일 경우 <span class="dot red"></span>추가 -->
+					<div class="depart">타이어 성형 2팀 <span class="safty-rate">안전지수 <strong>60</strong></span></div>
+				</div>
+            </div>
+            <!--// 개인정보 영역 -->
+			<div class="custom-select mgt2">
+				<select>
+					<option value="0">2021년 06월</option>
+					<option value="1">2021년 05월</option>
+					<option value="2">2021년 04월</option>
+				</select>
+			</div>
+			<ul class="week-schedule">
+				<li><div class="week">월</div><div class="date">8</div></li>
+				<li><div class="week">화</div><div class="date selected">9</div></li><!--선택된 날짜 표시 class=selected -->
+				<li><div class="week">수</div><div class="date disabled">10</div></li><!--선택불가 날짜 표시 class=disabled -->
+				<li><div class="week today">목</div><div class="date">11</div></li><!--오늘 날짜 표시 class=today -->
+				<li><div class="week">금</div><div class="date">12</div></li>
+				<li><div class="week">토</div><div class="date">13</div></li>
+				<li><div class="week">일</div><div class="date">14</div></li>
+			</ul>
+		</div>
+        
+        <div class="container">
+            <div class="container-box" style="margin-top: 20px;">
+                <div class="titTypeC">21/04/00 12:00 열람</div>
+                <div class="titTypeB"><span class="primary">4월 13일</span> AI 안전 리포트</div>
+                <div class="w100 mgt2">
+                    <img src="images/graph02.jpg" class="w100">
+                </div>
+                <div class="total-health-wrap">
+                    <span class="summary-card summary-emerg">
+                        <h6>긴급사고</h6>
+                        <strong>123건</strong>
+                    </span>
+                    <span class="summary-card summary-caution">
+                        <h6>주의상황</h6>
+                        <strong>8건</strong>
+                    </span>
+                    <span class="summary-card summary-danger">
+                        <h6>위험원인</h6>
+                        <strong>23건</strong>
+                    </span>
+                </div>
+                <div class="ai-con01">
+                    <p>
+                    홍길동님의 일일 안전지수는 <br>
+                    <strong class="emergency">{{36점}}</strong>입니다.</p> 
+                    긴급사고 {{0}}건, 주의상황은 {{5}}건 발생하였으며, 일 평균 맥박 {{60}}, 최저혈압 {{60}}, 최고혈압 {{110}}, 체온 {{36℃}}로 건강상태가 {{양호합니다.}} <br>
+                    위험 원인이 가장 자주 발생한 시간대는 {{3시}}로, 해당 시간대의 사고 위험에 향후 더욱 주의하시기 바랍니다.<br>
+                    오늘 작업 구역은 {{작업구역명}}, {{작업구역명}}, {{작업구역명}} 으로, 체크리스트 작성이 되지 않은 작업은 ({{작업구역명}} 작업입니다. / 없습니다.)<br>
+                    작업 종료 처리를 (완료/누락)하였습니다.
+                </div>
+                <div class="ai-con05">
+                    <div class="titTypeC">관리자 피드백</div>
+                    <p class="ai-feedback mgt2">
+                        긴급사고 {{0}}건, 주의상황은 {{5}}건 발생하였으며, 일 평균 맥박 {{60}}, 최저혈압 {{60}}, 최고혈압 {{110}}, 체온 {{36℃}}로 건강상태가 {{양호합니다.}}
+                        위험 원인이 가장 자주 발생한 시간대는 {{3시}}로, 해당 시간대의 사고 위험에 향후 더욱 주의하시기 바랍니다.<br><br>
+                        오늘 작업 구역은 {{작업구역명}}, {{작업구역명}}, {{작업구역명}} 으로, 체크리스트 작성이 되지 않은 작업은 ({{작업구역명}} 작업입니다. / 없습니다.)
+                        작업 종료 처리를 (완료/누락)하였습니다.
+                    </p>
+                </div>
+                
+                
+                <div class="tab mgt2">
+                    <button class="tablinks" onclick="openCity(event, 'safety-total-info-tab01')" id="defaultOpen">위험행동이력</button>
+                    <button class="tablinks" onclick="openCity(event, 'safety-total-info-tab02')">나의주행습관</button>
+                    <button class="tablinks" onclick="openCity(event, 'safety-total-info-tab03')">나의건강정보</button>
+                </div>
+
+				<!--위험행동이력 tab1 -->
+				<div id="safety-total-info-tab01" class="tabcontent clearfix mgt2">
+
+                    <!--위험 감지 Log -->
+                    <div class="accident-all-log">
+                        <div class="titTypeC">위험 감지 Log</div>
+                        <div class="timeline">
+                            <div class="timeline-content right">
+                                <div class="timeline-box">
+                                <h3>21/04/00 12:00:00 <span>H-23</span><span>H-1234</span></h3>
+                                <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
+                            </div>
+                            </div>
+                            <div class="timeline-content right">
+                                <div class="timeline-box">
+                                    <h3>21/04/00 12:00:00 <span>H-23</span><span>H-1234</span></h3>
+                                    <div>급속회전에 따른 위험</div>
+                                </div>
+                            </div>
+                            <div class="timeline-content right">
+                                <div class="timeline-box">
+                                    <h3>21/04/00 12:00:00 <span>H-23</span><span>H-1234</span></h3>
+                                    <div><span class="icon-accident">사고ID </span> 맥박수 이상</div>
+                                    </div>
+                            </div>
+                            <div class="timeline-content right">
+                                <div class="timeline-box">
+                                    <h3>21/04/00 12:00:00 <span>H-23</span></h3>
+                                    <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
+                                </div>
+                                </div>
+                                <div class="timeline-content right">
+                                    <div class="timeline-box">
+                                        <h3>21/04/00 12:00:00 <span>H-23</span></h3>
+                                        <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-content right">
+                                    <div class="timeline-box">
+                                        <h3>21/04/00 12:00:00 <span>H-23</span></h3>
+                                        <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-content right">
+                                    <div class="timeline-box">
+                                        <h3>21/04/00 12:00:00 <span>H-23</span></h3>
+                                        <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="mgt1">
+                            <a href="#" class="w100 btn-small gray-btn">더보기</a>
+                        </div>
+                    </div>
+
+                    <!--위험 행동 이력 -->
+                    <div class="operate__area mgt2">
+                        <div class="titTypeC">위험 행동 이력</div>
+                        <button class="operate-list accordion">
+                            <div class="opetation"><strong>H34</strong></div>
+                            <h2>21/04/13 12:00:00</h2>
+                            <div class="operate-info">지게차id<strong>센서id</strong></div>
+                        </button>
+                        <div class="panel">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="operate__area">
+                        <button class="operate-list accordion">
+                            <div class="opetation"><strong>H34</strong></div>
+                            <h2>21/04/13 12:00:00</h2>
+                            <div class="operate-info">지게차id<strong>센서id</strong></div>
+                        </button>
+                        <div class="panel">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="operate__area">
+                        <button class="operate-list accordion">
+                            <div class="opetation"><strong>H34</strong></div>
+                            <h2>21/04/13 12:00:00</h2>
+                            <div class="operate-info">지게차id<strong>센서id</strong></div>
+                        </button>
+                        <div class="panel">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="operate__area">
+                        <button class="operate-list accordion">
+                            <div class="opetation"><strong>H34</strong></div>
+                            <h2>21/04/13 12:00:00</h2>
+                            <div class="operate-info">지게차id<strong>센서id</strong></div>
+                        </button>
+                        <div class="panel">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="operate__area">
+                        <button class="operate-list accordion">
+                            <div class="opetation"><strong>H34</strong></div>
+                            <h2>21/04/13 12:00:00</h2>
+                            <div class="operate-info">지게차id<strong>센서id</strong></div>
+                        </button>
+                        <div class="panel">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="operate__area">
+                        <button class="operate-list accordion">
+                            <div class="opetation"><strong>H34</strong></div>
+                            <h2>21/04/13 12:00:00</h2>
+                            <div class="operate-info">지게차id<strong>센서id</strong></div>
+                        </button>
+                        <div class="panel">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="operate__area">
+                        <button class="operate-list accordion">
+                            <div class="opetation"><strong>H34</strong></div>
+                            <h2>21/04/13 12:00:00</h2>
+                            <div class="operate-info">지게차id<strong>센서id</strong></div>
+                        </button>
+                        <div class="panel">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="mgt1">
+                        <a href="#" class="w100 btn-small gray-btn">더보기</a>
+                    </div>
+                </div>
+
+                <!--나의주행습관 tab2 -->
+                <div id="safety-total-info-tab02" class="tabcontent clearfix mgt2">
+                </div>
+
+                <!--나의건강정보 tab3 -->
+                <div id="safety-total-info-tab03" class="tabcontent clearfix mgt2">
+                    <div class="titTypeC">시간대별 건강 상태</div>
+                    <div class="ai-state-wrap w100 mgt2">
+                        <div class="ai-state-total"><span>건강지수</span><strong>60점</strong></div>
+                        <div class="ai-states">
+                            <div class="ai-state-temperature">
+                                <h5>체온</h5>
+                                <div>최고 <strong>37.2℃</strong><br>최저 <strong>36.2℃</strong></div>
+                            </div>
+                            <div class="ai-state-pulse">
+                                <h5>맥박</h5> 
+                                <div>최고 <strong>120</strong> <br>
+                                    최저 <strong>60</strong>
+                                </div>
+                            </div>
+                            <div class="ai-state-blood">
+                                <h5>혈압</h5> 
+                                <div>최고 <strong>60/120</strong> <br>
+                                    최저 <strong>60/90</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="titTypeC mgt2">시간별 건강이상 감지 수</div>
+                    <div class="ai-state-graph w100 mgt2"><img src="images/graph03.jpg" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

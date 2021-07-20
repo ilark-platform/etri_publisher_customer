@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ETRI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+<header class="app">
+    <a href="#" class="preBtn">이전</a>
+    <h2>사용자정보 등록</h2>
+</header>
+
+<div class="contents">
+    <div class="join__wrap">
+        <div class="join-form">
+            <ul class="col2">
+                <li>
+                    <span>이름</span>
+                    <input type="text" disabled>
+                </li>
+                <li>
+                    <span>부서 (파트)</span>
+                    <select disabled>
+                        <option>소속부서</option><option></option>
+                    </select>
+                </li>
+                <li>
+                    <span>작업내용</span>
+                    <select disabled>
+                        <option>양생공정1단계</option><option></option>
+                    </select>
+                </li>
+                <li>
+                    <span>생년월일</span>
+                    <input type="text">
+                </li>
+                <li>
+                    <span>성별</span>
+                    <div>
+                        <label class="custom-radio">남성
+                            <input type="radio" checked="checked">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio">여성
+                            <input type="radio">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <span>국가</span>
+                    <select>
+                        <option>대한민국</option><option></option>
+                    </select>
+                </li>
+                <li>
+                    <span>혈액형</span>
+                    <select>
+                        <option>O형</option><option></option>
+                    </select>
+                </li>
+                <li>
+                    <span>본인연락처</span>
+                    <div class="d-flex j-content-between align-center">
+                        <select class="w30">
+                            <option>010</option><option>011</option>
+                        </select>
+                        -
+                        <input type="text" class="w30">-<input type="text" class="w30">
+                    </div>
+                </li>
+                <li>
+                    <span class="d-flex j-content-between align-center">비상연락망<a href="#" class="second-btn btn-small">추가하기</a></span>
+                    <div class="d-flex j-content-between align-center">
+                        <select class="w30">
+                            <option>010</option><option>011</option>
+                        </select>
+                        -
+                        <input type="text" class="w30">-<input type="text" class="w30">
+                    </div>
+                </li>
+                <li>
+                    <span>주소</span>
+                    <div class="d-flex j-content-between align-center">
+                        <input type="text">
+                        <button type="button" class="mgl1 btn-large second-btn">우편번호 찾기</button>
+                    </div>
+                    <input type="text" class="mgt1">
+                </li>
+                <li>
+                    <span>이메일</span>
+                    <div class="d-flex j-content-between align-center">
+                        <input type="text" class="w20">@<input type="text" class="w30">
+                        <select class="w40">
+                            <option>직접입력</option><option>naver.com</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <span>본인 사진등록</span>
+                    <div class="setting-app-info">
+                        <img src="images/dummy-profile.jpg" class="profile-photo">
+                        <div class="profile-info">
+                            <button type="button" class="mgt1 btn-small second-btn">사진등록</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="tR">
+                <button type="button" class="w100 btn-large primary-btn" onclick="document.getElementById('layerPop_confirm').style.display='block'">등록</button>
+            </div>
+        </div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

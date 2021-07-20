@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ETRI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+<div class="wrap">
+	<!-- header -->
+    <div class="header">
+		<div class="header__title">
+			<span>한국타이어 대전공장 안전관리시스템</span>
+		</div>
+		<div class="header__menu__toggle">
+			<div class="header__menu__hamburger">
+				<input class="hamburger__menu__btn" type="checkbox"/>
+
+				<span class="toolbar-menu"></span>
+
+				<div class="header__menu-area">
+					<div class="side__menu-list__close">
+						<span class="close"></span>
+					</div>
+                    <!-- LNB 개인정보 영역 -->
+					<div class="header_myinfo">
+						<div class="header-profile">
+							<img src="images/dummy-profile.jpg" class="profile-photo">
+							<div class="emergency"><span class="dot red"></span>주시대상</div><!-- 주시대상 상태에 따라 추가 -->
+						</div>
+						<div class="profile-info">
+							<span>홍길동</span>ID : 776</a>
+							<div>타이어 성형 2팀 | A08</div>
+							<a href="#">Logout</a><a href="#">Setting</a>
+						</div>
+					</div>
+					<!--// LNB 개인정보 영역 -->
+					<!-- menu -->
+					<div class="side__menu-list">
+						<button class="accordion">사고관리</button>
+						<div class="panel">
+							<a href="#">전체사고관리</a>
+							<a href="#">AI종합진단</a>
+							<a href="#">AI개인진단</a>
+						</div>
+						<a class="accordion ">안전점검일지</a>
+						<button class="accordion">작업관리</button>
+						<div class="panel">
+							<a href="#">작업자관리</a>
+							<a href="#">작업구역관리</a>
+							<a href="#">체크리스트관리</a>
+						</div>
+						<a class="accordion">운영기기관리</a>
+						<button class="accordion">메시지관리</button>
+						<div class="panel">
+							<a href="#">메시지관리</a>
+							<a href="#">메시지템플릿</a>
+						</div>
+						<a class="accordion">설정</a>
+					</div>
+					<!-- //menu -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="header__utility">
+			<a href="#" class="icon-alret" onclick="snackFunction()"><span class="dot red">5</span></a>
+		</div>
+    </div>
+	<div class="header__sub">
+		<div class="notice__area">
+            <span class="notice__area--date">2021-04-15</span>
+            <a href="#">5월 1일 지게차 안전점검을 실시합니다. <u>자세히보기</u></a>
+            <span class="icon-modify"><a href="#"></a></span>
+        </div>
+	</div>
+	
+	<div class="contents">
+        <div class="container">
+            <div class="d-flex j-content-between align-center">
+                <div class="msg-write-btn">
+                    <button type="button" onclick="document.getElementById('layerPop_msg_write').style.display='block'" class="line-primary-btn btn-large">메시지 작성</button>
+                </div>
+			</div>
+            <div class="container-box safetyCheck_wrap">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'message_mgm-received')" id="defaultOpen">받은메시지</button>
+                    <button class="tablinks" onclick="openCity(event, 'message_mgm-send')">보낸메시지</button>
+                </div>
+
+				<!--받은메시지 tab1 -->
+				<div id="message_mgm-received" class="tabcontent clearfix mgt1">
+                    <!--받은메시지 start -->
+                    <div class="message_received_wrap">
+                        <div class="msg-nonRead mgt1">안읽은 메시지 <strong>123</strong></div>
+                        <div class="search__box mgt1">
+							<ul>
+								<li>
+                                    <input type="text" placeholder="보낸사람 또는 제목을 입력하세요.">
+                                </li>
+							</ul>
+							<span class="search__box--button">
+                                <button type="button" class="line-primary-btn btn-large">Search</button>
+                            </span>
+						</div>
+
+                        <!-- Swiper 메시지 분류 -->
+                        <div class="swiper-container messageSort mgt2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#" class="chip-sort">전체 <strong>124</strong></a></div>
+                                <div class="swiper-slide"><a href="#" class="chip-sort">긴급사고 <strong>123</strong></a></div>
+                                <div class="swiper-slide"><a href="#" class="chip-sort">주의상황 <strong>123</strong></a></div>
+                                <div class="swiper-slide"><a href="#" class="chip-sort">일반 <strong>123</strong></a></div>
+                                <div class="swiper-slide"><a href="#" class="chip-sort">공지사항 <strong>123</strong></a></div>
+                                <div class="swiper-slide"><a href="#" class="chip-sort">작업지시 <strong>123</strong></a></div>
+                                <div class="swiper-slide"><a href="#" class="chip-sort">안전지적 <strong>123</strong></a></div>
+                            </div>
+                        </div>
+
+                        <section class="msg-container mgt2">
+                            <table class="msg-table">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <div class="msg-table-control">
+                                            <div class="msg-table-select-control">
+                                                <div>
+                                                    <span class="msg-table-select-control__selected-item-num">1</span>
+                                                    <span class="total"> / 123</span><!--전체 메시지 개수 연동 -->
+                                    
+                                                    <div class="msg-table-select-control__buttons">
+                                                        <button class="btn-small line-primary-btn">선택삭제</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="custom-checkbox" for="header"><!--전체선택 checkbox-->
+                                            <input type="checkbox"  id="header" >
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <div class="f-right"><a href="#" class="icon-reload"></a></div>
+                                    </th>
+                                </tr>
+                                </thead>
+                    
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <label class="custom-checkbox" for="01"><!--개별선택 checkbox-->
+                                            <input type="checkbox" id="01" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="msg-receiver">
+                                            Anne Ramirez<div class="msg-nonRead">안읽음</div><!--안읽음일 경우 class=msg-nonRead, 읽음일 경우 class=msg-Read -->
+                                        </div>
+                                        <a class="msg-contents">
+                                            <div class="msg-subject"><span class="chip">작업지시</span><strong>작업자 여러분께 알립니다.</strong></div>
+                                            <div class="msg-content">
+                                                안녕하세요, 작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자 작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.
+                                                작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.
+                                            </div>
+                                            <div class="msg-date">21/04/00 12:00</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="disabled"><!--읽음일 경우 class=disabled -->
+                                    <td>
+                                        <label class="custom-checkbox" for="02">
+                                            <input type="checkbox" id="02" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="msg-receiver">
+                                            Anne Ramirez<div class="msg-Read">읽음</div>
+                                        </div>
+                                        <a class="msg-contents">
+                                            <div class="msg-subject"><span class="chip">작업지시</span><strong>작업자 여러분께 알립니다.</strong></div>
+                                            <div class="msg-content">
+                                                안녕하세요, 작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.
+                                            </div>
+                                            <div class="msg-date">21/04/00 12:00</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="custom-checkbox" for="03">
+                                            <input type="checkbox" id="03" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="msg-receiver">
+                                            Anne Ramirez
+                                            <div class="msg-nonRead"><!-- 수신자 확인 경우-->
+                                                <a href="#" onclick="document.getElementById('layerPop_msg_receiver').style.display='block'" >1/5</a>
+                                            </div>
+                                        </div>
+                                        <a class="msg-contents">
+                                            <div class="msg-subject"><span class="chip">긴급사고</span><strong>작업자 여러분께 알립니다.</strong></div>
+                                            <div class="msg-content">
+                                                안녕하세요, 작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.
+                                            </div>
+                                            <div class="msg-date">21/04/00 12:00</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="custom-checkbox" for="04">
+                                            <input type="checkbox"  id="04" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="msg-receiver">
+                                            Anne Ramirez<div class="msg-nonRead">안읽음</div>
+                                        </div>
+                                        <a class="msg-contents">
+                                            <div class="msg-subject"><span class="chip">주의</span><strong>작업자 여러분께 알립니다.</strong></div>
+                                            <div class="msg-content">
+                                                안녕하세요, 작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.
+                                            </div>
+                                            <div class="msg-date">21/04/00 12:00</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="custom-checkbox" for="05">
+                                            <input type="checkbox"  id="05" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="msg-receiver">
+                                            Anne Ramirez<div class="msg-nonRead">안읽음</div>
+                                        </div>
+                                        <a class="msg-contents">
+                                            <div class="msg-subject"><span class="chip">작업지시</span><strong>작업자 여러분께 알립니다.</strong></div>
+                                            <div class="msg-content">
+                                                안녕하세요, 작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.
+                                            </div>
+                                            <div class="msg-date">21/04/00 12:00</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="custom-checkbox" for="06">
+                                            <input type="checkbox"  id="06" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="msg-receiver">
+                                            Anne Ramirez<div class="msg-nonRead">안읽음</div>
+                                        </div>
+                                        <a class="msg-contents">
+                                            <div class="msg-subject"><span class="chip">작업지시</span><strong>작업자 여러분께 알립니다.</strong></div>
+                                            <div class="msg-content">
+                                                안녕하세요, 작업자 여러분. 다음 주 정기 점검 전 필요한 준비를 각자.
+                                            </div>
+                                            <div class="msg-date">21/04/00 12:00</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="pagination mgt2">
+                                <a href="#" class="first"></a>
+                                <a href="#">1</a>
+                                <a class="active" href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#" class="last"></a>
+                            </div>    
+                        </section>
+                    </div>
+                </div>
+
+				<!--보낸메시지 tab2 -->
+				<div id="message_mgm-send" class="tabcontent clearfix mgt1">
+
+                </div>
+
+				<!--메시지 템플릿 tab3 -->
+				<div id="message_mgm-template" class="tabcontent clearfix mgt1">
+                    <div class="checklist_wrap">
+                        <!--메시지 템플릿 목록 -->
+                        <div class="divide mgt2">
+                            <div class="titTypeC d-flex j-content-between align-center">
+                                메시지 템플릿 목록
+                                <button type="button" class="line-primary-btn btn-small">템플릿 추가</button>
+                            </div>
+                            <div class="response-container">
+                                <table class="response-table">
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>종류</th>
+                                            <th>제목</th>
+                                            <th>보기</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="selected-bg"><!-- 선택된 행일 경우 class=selected-bg -->
+                                            <td>1</td>
+                                            <td>공지</td>
+                                            <td class="tL">소방 점검으로 인한 단전 안내</td>
+                                            <td><button type="button" class="btn-small gray-btn">보기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>안전지적</td>
+                                            <td class="tL">주의 요망</td>
+                                            <td><button type="button" class="btn-small gray-btn">보기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>안전지적</td>
+                                            <td class="tL">소방 점검으로 인한 단전 안내</td>
+                                            <td><button type="button" class="btn-small gray-btn">보기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>안전지적</td>
+                                            <td class="tL">주의 요망</td>
+                                            <td><button type="button" class="btn-small gray-btn">보기</button></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!--메시지 템플릿 내용 -->
+                        <div class="checklist-enroll mgt2">
+                            <div class="titTypeC d-flex j-content-between align-center">
+                                메시지 템플릿 내용
+                                <div>
+                                    <button type="button" class="line-primary-btn btn-small">삭제</button>
+                                    <button type="button" class="line-primary-btn btn-small">편집</button>
+                                    <button type="button" class="primary-btn btn-small">메시지 보내기</button>
+                                </div>
+                            </div>
+                            <div class="basic_form mgt1">
+                                <table>
+                                    <colgroup><col style="width:25%"></colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>메시지 종류</th>
+                                            <td>
+                                                <label class="custom-radio">공지
+                                                    <input type="radio" checked="checked">
+                                                    <span class="radio-checkmark"></span>
+                                                </label>
+                                                <label class="custom-radio">일반
+                                                    <input type="radio">
+                                                    <span class="radio-checkmark"></span>
+                                                </label>
+                                                <label class="custom-radio">작업지시
+                                                    <input type="radio">
+                                                    <span class="radio-checkmark"></span>
+                                                </label>
+                                                <label class="custom-radio">안전지적
+                                                    <input type="radio">
+                                                    <span class="radio-checkmark"></span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>제목</th>
+                                            <td>
+                                                소방 점검으로 인한 단전 안내
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>내용</th>
+                                            <td>
+                                                소방 점검으로 인한 단전 안내<br>
+                                                소방 점검으로 인한 단전 안내 소방 점검으로 인한 단전 안내
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+	</div>
+</div>
+
+
+
+<!-- 메시지 작성 layer popup-->
+<div id="layerPop_msg_write" class="modal m-full"><!-- 모달창이 모바일에서 전체로 열릴 경우 class=m-full 추가 -->
+    <div class="ly_pop_container width-middle">
+        <span onclick="document.getElementById('layerPop_msg_write').style.display='none'" class="ly_pop-close"></span>
+
+        <h2>메시지작성</h2>
+        <div class="ly_contents">
+            <div class="msg-write mgt2">
+                <span>받는사람</span>
+                <a href="#" class="chip-staus">홍길동</a><a href="#" class="chip-staus">홍길동</a>
+                <button type="button" class="accordion"><a href="#" class="icon-plus line-gray-btn btn-small"></a></button>
+                <div class="panel">
+                    <input type="text" placeholder="작업자명을 입력하세요.">
+                    <h3 class="mgt1">생산1팀</h3>
+                    <div class="receiver-wrap mgt1">
+                        <a><strong>홍길동</strong> {{작업자ID}}</a>
+                        <a><strong>홍길동</strong> {{작업자ID}}</a>
+                        <a><strong>홍길동</strong> {{작업자ID}}</a>
+                    </div>
+                    <h3 class="mgt1">생산2팀</h3>
+                    <div class="receiver-wrap mgt1">
+                        <a><strong>홍길동</strong> {{작업자ID}}</a>
+                        <a><strong>홍길동</strong> {{작업자ID}}</a>
+                        <a><strong>홍길동</strong> {{작업자ID}}</a>
+                    </div>
+                </div>
+            </div>
+                        
+			<div class="mgt1">
+                <input type="text" placeholder="제목을 입력하세요">
+                <textarea rows="7" class="mgt1" placeholder="내용을 입력하세요"></textarea>
+			</div>
+		</div>
+        
+        <div class="btn-wrap">
+            <button type="button" onclick="document.getElementById('layerPop_msg_write').style.display='none'" class="btn-large line-primary-btn">취소</button>
+            <button type="button" onclick="document.getElementById('layerPop_msg_write').style.display='none'" class="btn-large primary-btn">보내기</button>
+        </div>
+    </div>
+</div>
+<!--// 메시지 작성 layer popup-->
+
+<!-- 메시지 수신자 확인 layer popup-->
+<div id="layerPop_msg_receiver" class="modal">
+    <div class="ly_pop_container">
+        <span onclick="document.getElementById('layerPop_msg_receiver').style.display='none'" class="ly_pop-close"></span>
+
+        <h2>수신확인</h2>
+        <div class="ly_contents">
+			<div class="response-container">
+				<table class="full-table">
+					<thead>
+						<tr>
+							<th>받는사람</th>
+							<th>열람일시</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>홍길동</td>
+							<td>2020/11/12</td>
+						</tr>
+						<tr>
+							<td>홍길동</td>
+							<td>2020/11/12</td>
+						</tr>
+						<tr>
+							<td>홍길동</td>
+							<td>2020/11/12</td>
+						</tr>
+                        <tr>
+							<td>홍길동</td>
+							<td><span class="primary">안읽음</span></td>
+						</tr>
+						<tr>
+							<td>홍길동</td>
+							<td><span class="primary">안읽음</span></td>
+						</tr>
+						<tr>
+							<td>홍길동</td>
+							<td>2020/11/12</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+        </div>
+    </div>
+</div>
+<!--// 메시지 수신자 확인 layer popup-->
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

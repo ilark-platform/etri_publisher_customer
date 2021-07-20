@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ETRI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+<header class="app">
+    <a href="#" class="preBtn">이전</a>
+    <h2>비밀번호 설정</h2>
+</header>
+
+<div class="contents">
+<div class="join__wrap">
+    <div class="join-form">
+        <ul class="col2">
+            <li>
+                <span>아이디</span>
+                <input type="text" placeholder="abcd" disabled>
+            </li>
+            <li>
+                <span>비밀번호</span>
+                <div style="position: relative;">
+                    <input type="password" placeholder="영문, 숫자, 특수문자를 조합한 8자리 이상" value="FakePSW" id="myInput">
+                    <a href="#" onclick="myFunction()" class="icon-password"></a><!-- 비밀번호 보이기 -->
+                </div>
+            </li>
+            <li>
+                <span>비밀번호 재확인</span>
+                <div style="position: relative;">
+                    <input type="password" placeholder="영문, 숫자, 특수문자를 조합한 8자리 이상" value="FakePSW" id="myInput">
+                    <a href="#" onclick="myFunction()" class="icon-password"></a><!-- 비밀번호 보이기 -->
+                </div>
+            </li>
+        </ul>
+        <div class="tR">
+            <button type="button" class="w20 btn-large primary-btn" onclick="document.getElementById('layerPop_confirm').style.display='block'">저장</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- 비밀번호 재설정 layer popup-->
+<div id="layerPop_confirm" class="modal">
+    <div class="ly_pop_container ly-alert">
+        <span onclick="document.getElementById('layerPop_confirm').style.display='none'" class="ly_pop-close"></span>
+        <p>
+            <span class="d-block titTypeA">등록계정타입 : {{계정타입}}</span>
+            <br>  
+            계정 생성 승인이 요청되었습니다.
+        </p>
+        <div class="btn-wrap">
+            <button type="button" onclick="document.getElementById('layerPop_confirm').style.display='none'" class="btn-large primary-btn">확인</button>
+        </div>
+    </div>
+</div>
+<!--// 비밀번호 재설정 layer popup-->
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

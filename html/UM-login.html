@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ETRI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+<div class="login__wrap">
+    <div class="left">
+        <img src="images/logo.png">
+        <h2>한국타이어 산업안전관리 시스템</h2>
+    </div>
+    <div class="right">
+        <h3>LOGIN</h3>
+        <form>
+            <input type="text" placeholder="아이디를 입력하세요.">
+            <div style="position: relative;">
+                <input type="password" placeholder="비밀번호를 입력하세요." value="FakePSW" id="myInput">
+                <a href="#" onclick="myFunction()" class="icon-password"></a><!-- 비밀번호 보이기 -->
+            </div>
+            <div class="warningTxt">Check your ID and Password again.</div><!--입력 에러시 알림 문구 추가-->
+            <button type="button" class="btn-large primary-btn w100">LOGIN</button>
+        </form>
+        <div class="menulist">
+            <a href="#" onclick="document.getElementById('layerPop_password_reset').style.display='block'">비밀번호 초기화</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 비밀번호 재설정 layer popup-->
+<div id="layerPop_password_reset" class="modal">
+    <div class="ly_pop_container">
+        <span onclick="document.getElementById('layerPop_password_reset').style.display='none'" class="ly_pop-close"></span>
+
+        <h2>비밀번호 재설정</h2>
+        <div class="ly_contents">
+			<div class="mgt2">
+                <input type="text" placeholder="name@example.com">
+                <p class="mgt2">
+                    입력하신 이메일 주소로 안내 메일이 발송됩니다.
+                </p>
+            </div>
+		</div>
+        
+        <div class="btn-wrap">
+            <button type="button" onclick="document.getElementById('layerPop_msg_write').style.display='none'" class="btn-large line-primary-btn">취소</button>
+            <button type="button" onclick="document.getElementById('layerPop_msg_write').style.display='none'" class="btn-large primary-btn">확인</button>
+        </div>
+    </div>
+</div>
+<!--// 비밀번호 재설정 layer popup-->
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

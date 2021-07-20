@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ETRI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+	<!-- header -->
+    <div class="header">
+		<div class="header__title">
+			<span>한국타이어 대전공장 안전관리시스템</span>
+		</div>
+		<div class="header__menu__toggle">
+			<div class="header__menu__hamburger">
+				<input class="hamburger__menu__btn" type="checkbox"/>
+
+				<span class="toolbar-menu"></span>
+
+				<div class="header__menu-area">
+					<div class="side__menu-list__close">
+						<span class="close"></span>
+					</div>
+                    <!-- LNB 개인정보 영역 -->
+					<div class="header_myinfo">
+						<div class="header-profile">
+							<img src="images/dummy-profile.jpg" class="profile-photo">
+							<div class="emergency"><span class="dot red"></span>주시대상</div><!-- 주시대상 상태에 따라 추가 -->
+						</div>
+						<div class="profile-info">
+							<span>홍길동</span>ID : 776</a>
+							<div>타이어 성형 2팀 | A08</div>
+							<a href="#">Logout</a><a href="#">Setting</a>
+						</div>
+					</div>
+					<!--// LNB 개인정보 영역 -->
+					<!-- menu -->
+					<div class="side__menu-list">
+						<button class="accordion">사고관리</button>
+						<div class="panel">
+							<a href="#">전체사고관리</a>
+							<a href="#">AI종합진단</a>
+							<a href="#">AI개인진단</a>
+						</div>
+						<a class="accordion ">안전점검일지</a>
+						<button class="accordion">작업관리</button>
+						<div class="panel">
+							<a href="#">작업자관리</a>
+							<a href="#">작업구역관리</a>
+							<a href="#">체크리스트관리</a>
+						</div>
+						<a class="accordion">운영기기관리</a>
+						<button class="accordion">메시지관리</button>
+						<div class="panel">
+							<a href="#">메시지관리</a>
+							<a href="#">메시지템플릿</a>
+						</div>
+						<a class="accordion">설정</a>
+					</div>
+					<!-- //menu -->
+				</div>
+			</div>
+		</div>
+
+		
+	<!--긴급사고 알림 snackbar -->
+		<div id="snackbar">
+			<span onclick="this.parentElement.style.display='none';" class="ly_pop-close"></span>
+			<h2>긴급사고 / 주의상황 알림</h2>
+				<div class="ly_emerg_con">
+					<span class="icon-emerg"></span>
+					<span>
+					타이어 적재 작업구역에서<br>
+					<strong>지게차(ID번호) 충돌 사고가 발생</strong>했습니다.
+					<h4 class="mgt1">
+						2021-01-01 15:23:41 <strong>운전자 : 홍길동</strong>
+					</h4>
+					<button type="button" class="btn-small second-btn mgt1">자세히 보기</button>
+				</span>
+				</div>
+			<div class="btn-wrap">
+				<button type="button" class="btn-large line-darkgray-btn">이동</button>
+				<button type="button" class="btn-large red-btn">다음알림</button>
+			</div>
+		</div>
+	<!--//긴급사고 알림 snackbar -->
+
+		<div class="header__utility">
+			<a href="#" class="icon-alret" onclick="snackFunction()"><span class="dot red">5</span></a>
+			<a href="#" class="icon-mail"><span class="dot green">2</span></a>
+			<span class="user-info">
+				<a href="#" onclick="myFunction_userInfo()"><img src="images/dummy-profile.jpg"><span>홍길동</span> 안전관리자</a>
+				<div id="myDropdown" class="profile-container">
+					<img src="images/dummy-profile.jpg" class="profile-photo">
+					<div class="profile-info">
+						<span>홍길동</span>안전관리자</a>
+						<a href="#">Logout</a><a href="#">Setting</a>
+					</div>
+				</div>
+			</span>
+		</div>
+    </div>
+	<div class="header__sub">
+		<div class="notice__area">
+            <span class="notice__area--date">2021-04-15</span>
+            <a href="#">5월 1일 지게차 안전점검을 실시합니다. <u>자세히보기</u></a>
+            <span class="icon-modify"><a href="#"></a></span>
+        </div>
+	</div>
+
+    <div class="contents">
+        <div class="join__wrap">
+            <h3 class="titTypeB">사용자 정보</h3>
+            <div class="join-form">
+                <ul class="col2">
+                    <li>
+                        <span>이름</span>
+                        <input type="text" disabled>
+                    </li>
+                    <li>
+                        <span>부서 (파트)</span>
+                        <select disabled>
+                            <option>소속부서</option><option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <span>작업내용</span>
+                        <select disabled>
+                            <option>양생공정1단계</option><option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <span>생년월일</span>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <span>성별</span>
+                        <div>
+                            <label class="custom-radio">남성
+                                <input type="radio" checked="checked">
+                                <span class="radio-checkmark"></span>
+                            </label>
+                            <label class="custom-radio">여성
+                                <input type="radio">
+                                <span class="radio-checkmark"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>국가</span>
+                        <select>
+                            <option>대한민국</option><option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <span>혈액형</span>
+                        <select>
+                            <option>O형</option><option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <span>본인연락처</span>
+                        <div class="d-flex j-content-between align-center">
+                            <select class="w30">
+                                <option>010</option><option>011</option>
+                            </select>
+                            -
+                            <input type="text" class="w30">-<input type="text" class="w30">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="d-flex j-content-between align-center">비상연락망<a href="#" class="second-btn btn-small">추가하기</a></span>
+                        <div class="d-flex j-content-between align-center">
+                            <select class="w30">
+                                <option>010</option><option>011</option>
+                            </select>
+                            -
+                            <input type="text" class="w30">-<input type="text" class="w30">
+                        </div>
+                    </li>
+                    <li>
+                        <span>주소</span>
+                        <div class="d-flex j-content-between align-center">
+                            <input type="text">
+                            <button type="button" class="mgl1 btn-large second-btn">우편번호 찾기</button>
+                        </div>
+                        <input type="text" class="mgt1">
+                    </li>
+                    <li>
+                        <span>이메일</span>
+                        <div class="d-flex j-content-between align-center">
+                            <input type="text" class="w20">@<input type="text" class="w30">
+                            <select class="w40">
+                                <option>직접입력</option><option>naver.com</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <span>본인 사진등록</span>
+                        <div class="setting-app-info">
+                            <img src="images/dummy-profile.jpg" class="profile-photo">
+                            <div class="profile-info">
+                                <button type="button" class="mgt1 btn-small second-btn">사진등록</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="tR">
+                    <button type="button" class="w100 btn-large primary-btn" onclick="document.getElementById('layerPop_confirm').style.display='block'">저장</button>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>
