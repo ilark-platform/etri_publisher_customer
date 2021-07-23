@@ -84,15 +84,6 @@
 	<div class="contents">
 		<!--주간 날짜 선택:: 고정-->
 		<div class="safetyCheck-calendar-app" style="position: relative;top:0;z-index: 0;padding:2px 10px">
-            <!-- 개인정보 영역 -->
-            <div class="setting-app-info mgt1">
-                <img src="images/dummy-profile.jpg" class="profile-photo">
-                <div class="profile-info">
-					<span><span class="dot red"></span>홍길동</span>ID : 776</a><!--주시대상일 경우 <span class="dot red"></span>추가 -->
-					<div class="depart">타이어 성형 2팀 <span class="safty-rate">안전지수 <strong>60</strong></span></div>
-				</div>
-            </div>
-            <!--// 개인정보 영역 -->
 			<div class="custom-select mgt2">
 				<select>
 					<option value="0">2021년 06월</option>
@@ -150,153 +141,62 @@
                         작업 종료 처리를 (완료/누락)하였습니다.
                     </p>
                 </div>
-                
-                
-                <div class="tab mgt2">
-                    <button class="tablinks" onclick="openCity(event, 'safety-total-info-tab01')" id="defaultOpen">위험행동이력</button>
-                    <button class="tablinks" onclick="openCity(event, 'safety-total-info-tab02')">나의주행습관</button>
-                    <button class="tablinks" onclick="openCity(event, 'safety-total-info-tab03')">나의건강정보</button>
-                </div>
 
-				<!--위험행동이력 tab1 -->
-				<div id="safety-total-info-tab01" class="tabcontent clearfix mgt2">
-
-                    <!--위험 감지 Log -->
-                    <div class="accident-all-log">
-                        <div class="titTypeC">위험 감지 Log</div>
-                        <div class="timeline">
-                            <div class="timeline-content right">
-                                <div class="timeline-box">
+                <!--위험 감지 Log -->
+                <div class="mgt2 accident-all-log">
+                    <div class="titTypeC">위험 감지 Log</div>
+                    <div class="timeline">
+                        <div class="timeline-content right">
+                            <div class="timeline-box">
+                            <h3>21/04/00 12:00:00 <span>H-23</span><span>H-1234</span></h3>
+                            <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
+                        </div>
+                        </div>
+                        <div class="timeline-content right">
+                            <div class="timeline-box">
                                 <h3>21/04/00 12:00:00 <span>H-23</span><span>H-1234</span></h3>
+                                <div>급속회전에 따른 위험</div>
+                            </div>
+                        </div>
+                        <div class="timeline-content right">
+                            <div class="timeline-box">
+                                <h3>21/04/00 12:00:00 <span>H-23</span><span>H-1234</span></h3>
+                                <div><span class="icon-accident">사고ID </span> 맥박수 이상</div>
+                                </div>
+                        </div>
+                        <div class="timeline-content right">
+                            <div class="timeline-box">
+                                <h3>21/04/00 12:00:00 <span>H-23</span></h3>
                                 <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
                             </div>
-                            </div>
-                            <div class="timeline-content right">
-                                <div class="timeline-box">
-                                    <h3>21/04/00 12:00:00 <span>H-23</span><span>H-1234</span></h3>
-                                    <div>급속회전에 따른 위험</div>
-                                </div>
-                            </div>
-                            <div class="timeline-content right">
-                                <div class="timeline-box">
-                                    <h3>21/04/00 12:00:00 <span>H-23</span><span>H-1234</span></h3>
-                                    <div><span class="icon-accident">사고ID </span> 맥박수 이상</div>
-                                    </div>
                             </div>
                             <div class="timeline-content right">
                                 <div class="timeline-box">
                                     <h3>21/04/00 12:00:00 <span>H-23</span></h3>
                                     <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
                                 </div>
+                            </div>
+                            <div class="timeline-content right">
+                                <div class="timeline-box">
+                                    <h3>21/04/00 12:00:00 <span>H-23</span></h3>
+                                    <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
                                 </div>
-                                <div class="timeline-content right">
-                                    <div class="timeline-box">
-                                        <h3>21/04/00 12:00:00 <span>H-23</span></h3>
-                                        <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
-                                    </div>
+                            </div>
+                            <div class="timeline-content right">
+                                <div class="timeline-box">
+                                    <h3>21/04/00 12:00:00 <span>H-23</span></h3>
+                                    <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
                                 </div>
-                                <div class="timeline-content right">
-                                    <div class="timeline-box">
-                                        <h3>21/04/00 12:00:00 <span>H-23</span></h3>
-                                        <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
-                                    </div>
-                                </div>
-                                <div class="timeline-content right">
-                                    <div class="timeline-box">
-                                        <h3>21/04/00 12:00:00 <span>H-23</span></h3>
-                                        <div><span class="icon-accident">사고ID <span class="icon-forklift"></span>지게차ID</span> 충돌사고발생</div>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="mgt1">
-                            <a href="#" class="w100 btn-small gray-btn">더보기</a>
-                        </div>
-                    </div>
-
-                    <!--위험 행동 이력 -->
-                    <div class="operate__area mgt2">
-                        <div class="titTypeC">위험 행동 이력</div>
-                        <button class="operate-list accordion">
-                            <div class="opetation"><strong>H34</strong></div>
-                            <h2>21/04/13 12:00:00</h2>
-                            <div class="operate-info">지게차id<strong>센서id</strong></div>
-                        </button>
-                        <div class="panel">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="operate__area">
-                        <button class="operate-list accordion">
-                            <div class="opetation"><strong>H34</strong></div>
-                            <h2>21/04/13 12:00:00</h2>
-                            <div class="operate-info">지게차id<strong>센서id</strong></div>
-                        </button>
-                        <div class="panel">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="operate__area">
-                        <button class="operate-list accordion">
-                            <div class="opetation"><strong>H34</strong></div>
-                            <h2>21/04/13 12:00:00</h2>
-                            <div class="operate-info">지게차id<strong>센서id</strong></div>
-                        </button>
-                        <div class="panel">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="operate__area">
-                        <button class="operate-list accordion">
-                            <div class="opetation"><strong>H34</strong></div>
-                            <h2>21/04/13 12:00:00</h2>
-                            <div class="operate-info">지게차id<strong>센서id</strong></div>
-                        </button>
-                        <div class="panel">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="operate__area">
-                        <button class="operate-list accordion">
-                            <div class="opetation"><strong>H34</strong></div>
-                            <h2>21/04/13 12:00:00</h2>
-                            <div class="operate-info">지게차id<strong>센서id</strong></div>
-                        </button>
-                        <div class="panel">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="operate__area">
-                        <button class="operate-list accordion">
-                            <div class="opetation"><strong>H34</strong></div>
-                            <h2>21/04/13 12:00:00</h2>
-                            <div class="operate-info">지게차id<strong>센서id</strong></div>
-                        </button>
-                        <div class="panel">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="operate__area">
-                        <button class="operate-list accordion">
-                            <div class="opetation"><strong>H34</strong></div>
-                            <h2>21/04/13 12:00:00</h2>
-                            <div class="operate-info">지게차id<strong>센서id</strong></div>
-                        </button>
-                        <div class="panel">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gmp1W6TrbmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                            </div>
                     </div>
                     <div class="mgt1">
                         <a href="#" class="w100 btn-small gray-btn">더보기</a>
                     </div>
                 </div>
 
-                <!--나의주행습관 tab2 -->
-                <div id="safety-total-info-tab02" class="tabcontent clearfix mgt2">
-                </div>
-
-                <!--나의건강정보 tab3 -->
-                <div id="safety-total-info-tab03" class="tabcontent clearfix mgt2">
-                    <div class="titTypeC">시간대별 건강 상태</div>
+                <!--나의건강정보 -->
+                <div class="mgt2">
+                    <div class="titTypeC">나의건강정보</div>
                     <div class="ai-state-wrap w100 mgt2">
                         <div class="ai-state-total"><span>건강지수</span><strong>60점</strong></div>
                         <div class="ai-states">

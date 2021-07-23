@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ETRI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+<div class="wrap">
+	<!-- header -->
+    <div class="header">
+		<div class="header__title">
+			<span>한국타이어 대전공장 안전관리시스템</span>
+		</div>
+		<div class="header__menu__toggle">
+			<div class="header__menu__hamburger">
+				<input class="hamburger__menu__btn" type="checkbox"/>
+
+				<span class="toolbar-menu"></span>
+
+				<div class="header__menu-area">
+					<div class="side__menu-list__close">
+						<span class="close"></span>
+					</div>
+                    <!-- LNB 개인정보 영역 -->
+					<div class="header_myinfo">
+						<div class="header-profile">
+							<img src="images/dummy-profile.jpg" class="profile-photo">
+							<div class="emergency"><span class="dot red"></span>주시대상</div><!-- 주시대상 상태에 따라 추가 -->
+						</div>
+						<div class="profile-info">
+							<span>홍길동</span>ID : 776</a>
+							<div>타이어 성형 2팀 | A08</div>
+							<a href="#">Logout</a><a href="#">Setting</a>
+						</div>
+					</div>
+					<!--// LNB 개인정보 영역 -->
+					<!-- menu -->
+					<div class="side__menu-list">
+						<button class="accordion">사고관리</button>
+						<div class="panel">
+							<a href="#">전체사고관리</a>
+							<a href="#">AI종합진단</a>
+							<a href="#">AI개인진단</a>
+						</div>
+						<a class="accordion ">안전점검일지</a>
+						<button class="accordion">작업관리</button>
+						<div class="panel">
+							<a href="#">작업자관리</a>
+							<a href="#">작업구역관리</a>
+							<a href="#">체크리스트관리</a>
+						</div>
+						<a class="accordion">운영기기관리</a>
+						<button class="accordion">메시지관리</button>
+						<div class="panel">
+							<a href="#">메시지관리</a>
+							<a href="#">메시지템플릿</a>
+						</div>
+						<a class="accordion">설정</a>
+					</div>
+					<!-- //menu -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="header__utility">
+			<a href="#" class="icon-alret" onclick="snackFunction()"><span class="dot red">5</span></a>
+		</div>
+    </div>
+	<div class="header__sub">
+		<div class="notice__area">
+            <span class="notice__area--date">2021-04-15</span>
+            <a href="#">5월 1일 지게차 안전점검을 실시합니다. <u>자세히보기</u></a>
+            <span class="icon-modify"><a href="#"></a></span>
+        </div>
+	</div>
+	
+	<div class="contents">
+		<!-- 개인정보 영역 -->
+		<div class="container">
+			<div class="container-box">
+				<div class="setting-app-info">
+					<img src="images/dummy-profile.jpg" class="profile-photo">
+					<div class="profile-info">
+						<span><span class="dot red"></span>홍길동</span>ID : 776</a><!--주시대상일 경우 <span class="dot red"></span>추가 -->
+						<div class="depart">타이어 성형 2팀 <span class="safty-rate">안전지수 <strong>60</strong></span></div>
+					</div>
+				</div>
+				<div class="total-health-wrap">
+					<span class="summary-card">
+						<h6 class="icon-blood">혈압</h6>
+						<strong>60/90</strong>
+					</span>
+					<span class="summary-card">
+						<h6 class="icon-temperature">체온</h6>
+						<strong>36.5</strong>
+					</span>
+					<span class="summary-card">
+						<h6 class="icon-pulse">평균맥박</h6>
+						<strong>110</strong>
+					</span>
+				</div>
+				<div class="titTypeC mgt2">건강 종합 그래프</div>
+				<div class="ai-state-graph w100 mgt1"><img src="images/graph03.jpg" style="width: 100%"></div>
+			</div>	
+		</div>
+		<!--// 개인정보 영역 -->
+	
+		<!-- 작업기기 정보 영역 -->
+		<div class="container">
+			<div class="container-box machine-info">
+				<div class="titTypeC">작업기기 정보</div>
+				<div class="setting-app-info mgt1">
+					<img src="images/dummy-forklift.jpeg" class="profile-photo">
+					<div class="profile-info">
+						<div class="d-flex j-content-between">
+							<span>안전고리 <strong>K06626133</strong></span><div class="chip-staus"><span class="dot orange"></span>불량체결</div><!--정상체결일 경우 <span class="dot green"></span>추가, 불량체결일 경우 <span class="dot orange"></span>추가, 미체결일 경우 <span class="dot red"></span>추가 -->
+						</div>
+						<span class="work-area-card-id">현재고도 해발10m</span>
+					</div>
+				</div>
+                <div class="setting-app-info mgt1">
+					<img src="images/dummy-forklift.jpeg" class="profile-photo">
+					<div class="profile-info">
+						<div class="d-flex j-content-between">
+							<span>스마트밴드 <strong>K06626133</strong></span><div class="chip-staus"><span class="dot green"></span>운영중</div><!--운영중일 경우 <span class="dot green"></span>추가 -->
+						</div>
+						<span class="work-area-card-id">H-03</span>
+					</div>
+				</div>
+			</div>		
+		</div>			
+		<!--// 작업기기 정보 영역 -->	
+	
+		<!--주간 날짜 선택 -->
+		<div class="safetyCheck-calendar-app" style="position: relative;top:0;z-index: 0;">
+			<div class="custom-select">
+				<select>
+					<option value="0">2021년 06월</option>
+					<option value="1">2021년 05월</option>
+					<option value="2">2021년 04월</option>
+				</select>
+			</div>
+			<ul class="week-schedule">
+				<li><div class="week">월</div><div class="date">8</div></li>
+				<li><div class="week">화</div><div class="date selected">9</div></li><!--선택된 날짜 표시 class=selected -->
+				<li><div class="week">수</div><div class="date disabled">10</div></li><!--선택불가 날짜 표시 class=disabled -->
+				<li><div class="week today">목</div><div class="date">11</div></li><!--오늘 날짜 표시 class=today -->
+				<li><div class="week">금</div><div class="date">12</div></li>
+				<li><div class="week">토</div><div class="date">13</div></li>
+				<li><div class="week">일</div><div class="date">14</div></li>
+			</ul>
+		</div>
+	
+		<div class="container total_list_wrap mgt1">
+			<button class="accordion mgt1">
+				<h2>안전지적 항목<strong>12건</strong></h2>
+			</button>
+			<div class="panel">
+				<a href="#" onclick="document.getElementById('layerPop-total-list').style.display='block'" class="total-list">
+					<div class="state red">주의</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+					<div class="subject">
+						<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
+						<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
+					</div>
+				</a>
+				<a href="#" onclick="document.getElementById('layerPop-total-list').style.display='block'" class="total-list">
+					<div class="state green">정상</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+					<div class="subject">
+						<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
+						<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
+					</div>
+				</a>
+			</div>
+			
+			<button class="accordion mgt1">
+				<h2>작업지시 항목<strong>2건</strong></h2>
+			</button>
+			<div class="panel">
+				<a href="#" onclick="document.getElementById('layerPop-total-list').style.display='block'" class="total-list">
+					<div class="state red">주의</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+					<div class="subject">
+						<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
+						<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
+					</div>
+				</a>
+				<a href="#" class="total-list">
+					<div class="state green">정상</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+					<div class="subject">
+						<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
+						<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
+					</div>
+				</a>
+			</div>
+		</div>
+	
+		<!-- 오늘 작업구역 Swiper -->
+		<div class="swiper-container main-workarea">
+		  <div class="titTypeC">오늘 작업구역 <span class="dot primary">3</span></div>
+		  <div class="swiper-wrapper mgt1">
+			<div class="swiper-slide">
+				<div class="head">
+					<div><h2>양생공정 1단계</h2><button type="button" class="btn-small line-white-btn">체크리스트 작성</button></div>
+					<span class="work-area-card-id">H-03</span>
+				</div>
+				<div class="worklist">
+					<div class="tR"><a href="#" class="btn-small gray-btn">전체보기</a></div>
+					<ul>
+						<li><a href="#" onclick="document.getElementById('layerPop-total-list-detail').style.display='block'">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+						<li><a href="#" onclick="document.getElementById('layerPop-total-list-detail').style.display='block'">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+						<li><a href="#">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="head">
+					<div><h2>양생공정 2단계</h2><button type="button" class="btn-small line-white-btn">체크리스트 작성</button></div>
+					<span class="work-area-card-id">H-03</span>
+				</div>
+				<div class="worklist">
+					<div class="tR"><a href="#" class="btn-small gray-btn">전체보기</a></div>
+					<ul>
+						<li><a href="#">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+						<li><a href="#">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+						<li><a href="#">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="head">
+					<div><h2>양생공정 3단계</h2><button type="button" class="btn-small line-white-btn">체크리스트 작성</button></div>
+					<span class="work-area-card-id">H-03</span>
+				</div>
+				<div class="worklist">
+					<div class="tR"><a href="#" class="btn-small gray-btn">전체보기</a></div>
+					<ul>
+						<li><a href="#">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+						<li><a href="#">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+						<li><a href="#">5월 1일 지게차 안전점검을 실시합니다.</a></li>
+					</ul>
+				</div>
+			</div>  
+		  </div>
+		  <div class="swiper-pagination"></div>
+		</div>
+		<!-- 오늘 작업구역 Swiper -->
+	</div>
+</div>
+
+<!-- 안전지적 항목 레이어 팝업-->
+<div id="layerPop-total-list" class="modal">
+    <div class="ly_pop_container">
+        <span onclick="document.getElementById('layerPop-total-list').style.display='none'" class="ly_pop-close"></span>
+
+        <h2>상세보기</h2>
+		<div class="ly_contents">
+			<div href="#" class="total-list">
+				<div class="state red">주의</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+				<div class="subject">
+					<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
+					<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
+				</div>
+			</div>
+			<div class="mgt2">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+			</div>
+		</div>
+        
+    </div>
+</div>
+<!-- //안전지적 항목 레이어 팝업-->
+
+<!-- 오늘 작업구역 상세보기 레이어 팝업-->
+<div id="layerPop-total-list-detail" class="modal">
+    <div class="ly_pop_container">
+        <span onclick="document.getElementById('layerPop-total-list-detail').style.display='none'" class="ly_pop-close"></span>
+
+        <h2>상세보기</h2>
+		<div class="ly_contents">
+			<div href="#" class="total-list">
+				<div class="subject">
+					<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
+					<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
+				</div>
+			</div>
+			<div class="mgt2">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+			</div>
+		</div>
+        
+    </div>
+</div>
+<!-- //오늘 작업구역 상세보기 레이어 팝업-->
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper(".main-workarea", {
+	slidesPerView: 1,
+	spaceBetween: 10,
+	centeredSlides: true,
+	pagination: {
+	  el: ".swiper-pagination",
+	  clickable: true,
+	},
+});	
+</script>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>
