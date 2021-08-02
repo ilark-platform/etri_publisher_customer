@@ -70,28 +70,6 @@
 		</div>
 
 		
-	<!--긴급사고 알림 snackbar -->
-		<div id="snackbar">
-			<span onclick="this.parentElement.style.display='none';" class="ly_pop-close"></span>
-			<h2>긴급사고 / 주의상황 알림</h2>
-				<div class="ly_emerg_con">
-					<span class="icon-emerg"></span>
-					<span>
-					타이어 적재 작업구역에서<br>
-					<strong>지게차(ID번호) 충돌 사고가 발생</strong>했습니다.
-					<h4 class="mgt1">
-						2021-01-01 15:23:41 <strong>운전자 : 홍길동</strong>
-					</h4>
-					<button type="button" class="btn-small second-btn mgt1">자세히 보기</button>
-				</span>
-				</div>
-			<div class="btn-wrap">
-				<button type="button" class="btn-large line-darkgray-btn">이동</button>
-				<button type="button" class="btn-large red-btn">다음알림</button>
-			</div>
-		</div>
-	<!--//긴급사고 알림 snackbar -->
-
 		<div class="header__utility">
 			<a href="#" class="icon-alret" onclick="snackFunction()"><span class="dot red">5</span></a>
 			<a href="#" class="icon-mail"><span class="dot green">2</span></a>
@@ -138,7 +116,13 @@
                     </li>
                     <li>
                         <span>생년월일</span>
-                        <input type="text">
+						<div class="d-flex j-content-between align-center">
+							<input type="text" class="w30" placeholder="1990">년
+							<select class="w30">
+                            	<option>01월</option><option>02월</option>
+                        	</select>
+							<input type="text" class="w20" placeholder="01">일
+						</div>
                     </li>
                     <li>
                         <span>성별</span>
