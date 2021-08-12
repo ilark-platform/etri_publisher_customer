@@ -108,7 +108,7 @@
 					</span>
 				</div>
 				<div class="titTypeC mgt2">건강 종합 그래프</div>
-				<div class="ai-state-graph w100 mgt1"><img src="images/graph03.jpg" style="width: 100%"></div>
+				<div class="ai-state-graph w100 mgt1"><img src="images/bar-graph.gif" style="width: 100%"></div>
 			</div>	
 		</div>
 		<!--// 개인정보 영역 -->
@@ -156,14 +156,14 @@
 			</button>
 			<div class="panel">
 				<a href="#" onclick="document.getElementById('layerPop-total-list').style.display='block'" class="total-list">
-					<div class="state red">주의</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+					<div class="state red">주의</div>
 					<div class="subject">
 						<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
 						<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
 					</div>
 				</a>
 				<a href="#" onclick="document.getElementById('layerPop-total-list').style.display='block'" class="total-list">
-					<div class="state green">정상</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+					<div class="state red">주의</div>
 					<div class="subject">
 						<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
 						<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
@@ -176,14 +176,14 @@
 			</button>
 			<div class="panel">
 				<a href="#" onclick="document.getElementById('layerPop-total-list').style.display='block'" class="total-list">
-					<div class="state red">주의</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+					<div class="state green">작업지시</div>
 					<div class="subject">
 						<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
 						<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
 					</div>
 				</a>
 				<a href="#" class="total-list">
-					<div class="state green">정상</div><!--상태가 주의일 경우 red, 정상일 경우 green-->
+					<div class="state green">작업지시</div>
 					<div class="subject">
 						<h2>최근 주요한 사고가 다수 발생했습니다.</h2>
 						<div class="date">21/04/00 12:00:00<strong>홍길동</strong></div>
@@ -198,8 +198,16 @@
 		  <div class="swiper-wrapper mgt1">
 			<div class="swiper-slide">
 				<div class="head">
-					<div><h2>양생공정 1단계</h2><button type="button" class="btn-small line-white-btn">체크리스트 작성</button></div>
-					<span class="work-area-card-id">H-03</span>
+					<div class="step-box">
+						<a href="#">양생공정 2단계</a>
+						<a href="#">양생공정 2단계</a>
+						<a href="#">양생공정 2단계</a>
+					</div>
+					<button type="button" class="morebtn" onclick="document.getElementById('layerPop-more').style.display='block'"></button>
+					<div class="d-flex j-content-between align-center">
+						<span class="work-area-card-id">H-03</span>
+						<button type="button" class="btn-small line-white-btn">체크리스트 작성</button>
+					</div>
 				</div>
 				<div class="worklist">
 					<div class="tR"><a href="#" class="btn-small gray-btn">전체보기</a></div>
@@ -212,8 +220,16 @@
 			</div>
 			<div class="swiper-slide">
 				<div class="head">
-					<div><h2>양생공정 2단계</h2><button type="button" class="btn-small line-white-btn">체크리스트 작성</button></div>
-					<span class="work-area-card-id">H-03</span>
+					<div class="step-box">
+						<a href="#">양생공정 2단계</a>
+						<a href="#">양생공정 2단계</a>
+						<a href="#">양생공정 2단계</a>
+					</div>
+					<button type="button" class="morebtn" onclick="document.getElementById('layerPop-more').style.display='block'"></button>
+					<div class="d-flex j-content-between align-center">
+						<span class="work-area-card-id">H-03</span>
+						<button type="button" class="btn-small line-white-btn">체크리스트 작성</button>
+					</div>
 				</div>
 				<div class="worklist">
 					<div class="tR"><a href="#" class="btn-small gray-btn">전체보기</a></div>
@@ -226,8 +242,16 @@
 			</div>
 			<div class="swiper-slide">
 				<div class="head">
-					<div><h2>양생공정 3단계</h2><button type="button" class="btn-small line-white-btn">체크리스트 작성</button></div>
-					<span class="work-area-card-id">H-03</span>
+					<div class="step-box">
+						<a href="#">양생공정 2단계</a>
+						<a href="#">양생공정 2단계</a>
+						<a href="#">양생공정 2단계</a>
+					</div>
+					<button type="button" class="morebtn" onclick="document.getElementById('layerPop-more').style.display='block'"></button>
+					<div class="d-flex j-content-between align-center">
+						<span class="work-area-card-id">H-03</span>
+						<button type="button" class="btn-small line-white-btn">체크리스트 작성</button>
+					</div>
 				</div>
 				<div class="worklist">
 					<div class="tR"><a href="#" class="btn-small gray-btn">전체보기</a></div>
@@ -244,6 +268,25 @@
 		<!-- 오늘 작업구역 Swiper -->
 	</div>
 </div>
+
+<!-- 오늘 작업구역 더보기 레이어 팝업-->
+<div id="layerPop-more" class="modal">
+    <div class="ly_pop_container">
+        <span onclick="document.getElementById('layerPop-more').style.display='none'" class="ly_pop-close"></span>
+
+        <h2>공정 목록</h2>
+		<div class="ly_contents">
+			<div class="more-view">
+				<button type="button" class="btn-small second-btn">양생공정 1단계</button>
+				<button type="button" class="btn-small second-btn">양생공정 1단계</button>
+				<button type="button" class="btn-small second-btn">양생공정 1단계</button>
+				<button type="button" class="btn-small second-btn">양생공정 1단계</button>
+				<button type="button" class="btn-small second-btn">양생공정 1단계</button>
+			</div>
+		</div>
+    </div>
+</div>
+<!-- //오늘 작업구역 더보기 레이어 팝업-->
 
 <!-- 안전지적 항목 레이어 팝업-->
 <div id="layerPop-total-list" class="modal">
