@@ -85,7 +85,7 @@
 	<div class="contents">
 		<!-- 개인정보 영역 -->
 		<div class="container">
-			<div class="container-box">
+			<div class="container-box" style="position: relative;">
 				<div class="setting-app-info">
 					<img src="images/dummy-profile.jpg" class="profile-photo">
 					<div class="profile-info">
@@ -93,6 +93,12 @@
 						<div class="depart">타이어 성형 2팀 <span class="safty-rate">안전지수 <strong>60</strong></span></div>
 					</div>
 				</div>
+				<button type="button" id="workStart" class="setting-app-info btnStart" onClick="document.getElementById('workStart').style.display='none'">
+					<div class="btnStart-name">
+						21/08/12 11:23
+						<strong>작업시작</strong>
+					</div>
+				</button>
 				<div class="total-health-wrap">
 					<span class="summary-card">
 						<h6 class="icon-blood">혈압</h6>

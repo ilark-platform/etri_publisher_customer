@@ -976,6 +976,10 @@ header.app, .hidden {display:none}
 .setting-app-con li div {display:inline-block;width:70%;text-align: right;}
 .setting-app-con li div select{width:45%;}
 
+.btnStart{position: absolute;left: 10px;top:10px;width:94%;height: 88px;}
+.btnStart-name{background: url(https://icongr.am/clarity/cursor-hand-click.svg?size=42&color=9096a5) no-repeat 10px center;text-align: center}
+.btnStart-name>strong{display: block; font-size: 30px;font-weight: bold;color: var(--primary)}
+	
 .basic_form_ul li{width:100% !important}
 .basic_form_ul li label{width:110px}
 
